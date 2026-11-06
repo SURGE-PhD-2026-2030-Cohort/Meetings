@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <title>Surge PhD Cohort Meetings</title>
 <script>
 /* Apply a saved light/dark choice before the page paints, so it does not flash. */
@@ -12,7 +15,7 @@ try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')documen
 <style>
 /* Concept: a clean cohort dashboard with a lavender, plum and soft-violet palette. */
 :root{
-  --serif:"Century Gothic","AppleGothic",sans-serif;
+  --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --bg:#F7F5FC; --surface:#FFFFFF; --surface-2:#EEEAF7; --fg:#29213A; --muted:#756B88; --line:#E1DAEE;
   --accent:#8B70C7; --accent-text:#684DA5; --accent-soft:#EEE8FA; --accent-ink:#FFFFFF;
   --gold:#A78AD8; --gold-text:#7356AA; --gold-soft:#F0EAFB;
@@ -47,12 +50,12 @@ try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')documen
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--serif);font-size:16px;line-height:1.55;padding-inline:16px;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55;padding-inline:16px;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 button,input,select{font-family:inherit}
 [hidden]{display:none!important}
 .wrap{max-width:1120px;margin-inline:auto;padding-bottom:40px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-h1,h2,h3{font-family:var(--serif);margin:0;text-wrap:balance;line-height:1.18}
+h1,h2,h3{font-family:var(--sans);margin:0;text-wrap:balance;line-height:1.18}
 p{margin:0}
 a{color:var(--accent-text)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
