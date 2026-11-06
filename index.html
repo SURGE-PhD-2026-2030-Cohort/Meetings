@@ -6,35 +6,35 @@
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <title>Surge PhD Cohort Meetings</title>
 <script>
 /* Apply a saved light/dark choice before the page paints, so it does not flash. */
 try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t)}catch(e){}
 </script>
 <style>
-/* Concept: a contemporary research dashboard — charcoal, electric lime, warm ivory and soft sage, with an editorial display face. */
+/* Concept: an editorial research dashboard — warm ivory, near-black panels and restrained burnt-orange accents. */
 :root{
   --sans:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --display:"DM Serif Display",Georgia,"Times New Roman",serif;
-  --bg:#F4F3EA; --surface:#FFFFFF; --surface-2:#EAEDE2; --fg:#222820; --muted:#697264; --line:#DCE1D5;
-  --accent:#A8D94D; --accent-text:#405C20; --accent-soft:#EDF5D9; --accent-ink:#20271B;
-  --gold:#A8D94D; --gold-text:#405C20; --gold-soft:#EDF5D9;
-  --hero-bg:#222B23; --hero-fg:#F7F7EF; --hero-muted:#C4CCBD; --hero-gold:#C8F36A; --hero-line:rgba(255,255,255,.18);
-  --good:#397653; --good-soft:#E2F0E4;
-  --danger:#A34E45; --danger-soft:#F8E6E1;
-  --shadow:0 1px 2px rgba(34,40,32,.06),0 8px 24px -12px rgba(34,40,32,.2);
+  --bg:#F8F9D9; --surface:#FFFFEA; --surface-2:#EEF0D0; --fg:#171914; --muted:#686A58; --line:#DADDBB;
+  --accent:#C88948; --accent-text:#75471F; --accent-soft:#F4E3CA; --accent-ink:#17130D;
+  --gold:#C88948; --gold-text:#75471F; --gold-soft:#F4E3CA;
+  --hero-bg:#050707; --hero-fg:#F8F9DF; --hero-muted:#C6C7AE; --hero-gold:#D99A59; --hero-line:rgba(248,249,223,.2);
+  --good:#47764D; --good-soft:#E5EEDB;
+  --danger:#A34F3D; --danger-soft:#F7E5D8;
+  --shadow:0 1px 2px rgba(20,22,14,.07),0 10px 28px -14px rgba(20,22,14,.22);
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#151A15; --surface:#202720; --surface-2:#2B342B; --fg:#F0F2E9; --muted:#AAB4A3; --line:#3B4739;
-    --accent:#B8E85A; --accent-text:#D0F28C; --accent-soft:#303D25; --accent-ink:#20271B;
-    --gold:#B8E85A; --gold-text:#D0F28C; --gold-soft:#303D25;
-    --hero-bg:#0F140F; --hero-fg:#F5F6ED; --hero-muted:#B5C0AE; --hero-gold:#C8F36A; --hero-line:rgba(255,255,255,.18);
-    --good:#8BCB9A; --good-soft:#263B2A;
-    --danger:#E49A8D; --danger-soft:#442D29;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+    --bg:#11120D; --surface:#1D1F17; --surface-2:#292B20; --fg:#F5F3DF; --muted:#B7B39A; --line:#3B3B2D;
+    --accent:#D99A59; --accent-text:#F0BD82; --accent-soft:#3C2D20; --accent-ink:#17130D;
+    --gold:#D99A59; --gold-text:#F0BD82; --gold-soft:#3C2D20;
+    --hero-bg:#050606; --hero-fg:#F8F7E8; --hero-muted:#C5C1A9; --hero-gold:#E0A66B; --hero-line:rgba(248,247,232,.18);
+    --good:#8FC49A; --good-soft:#26382A;
+    --danger:#E39B87; --danger-soft:#432B25;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 8px 24px -12px rgba(0,0,0,.65);
     color-scheme:dark;
   }
 }
