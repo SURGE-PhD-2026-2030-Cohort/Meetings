@@ -13,37 +13,38 @@
 try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t)}catch(e){}
 </script>
 <style>
-/* Concept: a scholarly almanac. Georgia throughout, navy ink on cool paper, gold only for "now" (next session, today). The next-session panel is the single bold block; everything else stays quiet. Library entries read like reference-list citations. */
+/* Concept: a contemporary research dashboard — charcoal, electric lime, warm ivory and soft sage, with an editorial display face. */
 :root{
   --sans:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --bg:#F4F5FA; --surface:#FFFFFF; --surface-2:#ECEEF6; --fg:#121733; --muted:#59607F; --line:#D9DCEA;
-  --accent:#1C4E9D; --accent-text:#173F80; --accent-soft:#E2EAF8; --accent-ink:#FFFFFF;
-  --gold:#B7791F; --gold-text:#7A4E08; --gold-soft:#FBEED0;
-  --hero-bg:#101C45; --hero-fg:#F3F5FC; --hero-muted:#B3BCDD; --hero-gold:#F0C25E; --hero-line:rgba(255,255,255,.18);
-  --good:#17653A; --good-soft:#DCF0E3;
-  --danger:#A8231C; --danger-soft:#FBE0DE;
-  --shadow:0 1px 2px rgba(16,28,69,.06),0 8px 24px -12px rgba(16,28,69,.18);
+  --display:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --bg:#F4F3EA; --surface:#FFFFFF; --surface-2:#EAEDE2; --fg:#222820; --muted:#697264; --line:#DCE1D5;
+  --accent:#A8D94D; --accent-text:#405C20; --accent-soft:#EDF5D9; --accent-ink:#20271B;
+  --gold:#A8D94D; --gold-text:#405C20; --gold-soft:#EDF5D9;
+  --hero-bg:#222B23; --hero-fg:#F7F7EF; --hero-muted:#C4CCBD; --hero-gold:#C8F36A; --hero-line:rgba(255,255,255,.18);
+  --good:#397653; --good-soft:#E2F0E4;
+  --danger:#A34E45; --danger-soft:#F8E6E1;
+  --shadow:0 1px 2px rgba(34,40,32,.06),0 8px 24px -12px rgba(34,40,32,.2);
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0A1022; --surface:#111A33; --surface-2:#1A2547; --fg:#E8EBF7; --muted:#9AA3C4; --line:#25315A;
-    --accent:#86B4F5; --accent-text:#A9CAFA; --accent-soft:#16264A; --accent-ink:#0A1022;
-    --gold:#EDC15E; --gold-text:#EDC15E; --gold-soft:#3A2D0E;
-    --hero-bg:#16255A; --hero-fg:#F1F4FD; --hero-muted:#AEB8DC; --hero-gold:#F0C25E; --hero-line:rgba(255,255,255,.18);
-    --good:#6FD08C; --good-soft:#143020;
-    --danger:#FF8F86; --danger-soft:#3D1C1A;
+    --bg:#151A15; --surface:#202720; --surface-2:#2B342B; --fg:#F0F2E9; --muted:#AAB4A3; --line:#3B4739;
+    --accent:#B8E85A; --accent-text:#D0F28C; --accent-soft:#303D25; --accent-ink:#20271B;
+    --gold:#B8E85A; --gold-text:#D0F28C; --gold-soft:#303D25;
+    --hero-bg:#0F140F; --hero-fg:#F5F6ED; --hero-muted:#B5C0AE; --hero-gold:#C8F36A; --hero-line:rgba(255,255,255,.18);
+    --good:#8BCB9A; --good-soft:#263B2A;
+    --danger:#E49A8D; --danger-soft:#442D29;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0A1022; --surface:#111A33; --surface-2:#1A2547; --fg:#E8EBF7; --muted:#9AA3C4; --line:#25315A;
-  --accent:#86B4F5; --accent-text:#A9CAFA; --accent-soft:#16264A; --accent-ink:#0A1022;
-  --gold:#EDC15E; --gold-text:#EDC15E; --gold-soft:#3A2D0E;
-  --hero-bg:#16255A; --hero-fg:#F1F4FD; --hero-muted:#AEB8DC; --hero-gold:#F0C25E; --hero-line:rgba(255,255,255,.18);
-  --good:#6FD08C; --good-soft:#143020;
-  --danger:#FF8F86; --danger-soft:#3D1C1A;
+  --bg:#151A15; --surface:#202720; --surface-2:#2B342B; --fg:#F0F2E9; --muted:#AAB4A3; --line:#3B4739;
+  --accent:#B8E85A; --accent-text:#D0F28C; --accent-soft:#303D25; --accent-ink:#20271B;
+  --gold:#B8E85A; --gold-text:#D0F28C; --gold-soft:#303D25;
+  --hero-bg:#0F140F; --hero-fg:#F5F6ED; --hero-muted:#B5C0AE; --hero-gold:#C8F36A; --hero-line:rgba(255,255,255,.18);
+  --good:#8BCB9A; --good-soft:#263B2A;
+  --danger:#E49A8D; --danger-soft:#442D29;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
   color-scheme:dark;
 }
@@ -55,7 +56,7 @@ button,input,select{font-family:inherit}
 [hidden]{display:none!important}
 .wrap{max-width:1120px;margin-inline:auto;padding-bottom:40px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-h1,h2,h3{font-family:var(--sans);margin:0;text-wrap:balance;line-height:1.18}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;line-height:1.18}
 p{margin:0}
 a{color:var(--accent-text)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -96,14 +97,14 @@ a{color:var(--accent-text)}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 40px;align-items:start;background:var(--hero-bg);color:var(--hero-fg);border-radius:10px;padding:28px 30px 22px;margin-top:24px;box-shadow:var(--shadow)}
 .hero .eyebrow{color:var(--hero-gold)}
 .hero a{color:var(--hero-gold)}
-.next-title{font-size:clamp(1.65rem,1.1rem + 2.4vw,2.6rem);font-weight:700;margin-top:10px;letter-spacing:-.015em;overflow-wrap:anywhere}
+.next-title{font-family:var(--display);font-size:clamp(1.65rem,1.1rem + 2.4vw,2.6rem);font-weight:400;margin-top:10px;letter-spacing:-.015em;overflow-wrap:anywhere}
 .next-meta{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:12px;color:var(--hero-muted);font-size:16px}
 .next-meta b{color:var(--hero-fg);font-weight:400}
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .hero .btn{background:transparent;color:var(--hero-fg);border-color:var(--hero-line)}
 .hero .btn:hover{background:rgba(255,255,255,.1)}
 .hero-side{grid-column:2;grid-row:1 / span 3;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:104px}
-.hero-side .hnum{font-size:72px;line-height:1;font-weight:700;color:var(--hero-gold)}
+.hero-side .hnum{font-family:var(--display);font-size:72px;line-height:1;font-weight:400;color:var(--hero-gold)}
 .hero-side .hmon{font-style:italic;color:var(--hero-muted);font-size:15px}
 .hero .pill{background:rgba(255,255,255,.12);color:var(--hero-gold);margin-top:8px}
 .stats{grid-column:1 / -1;list-style:none;display:flex;flex-wrap:wrap;gap:10px 44px;margin:18px 0 0;padding:16px 0 0;border-top:1px solid var(--hero-line);color:var(--hero-muted);font-size:14.5px}
