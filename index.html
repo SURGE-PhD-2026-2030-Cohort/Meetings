@@ -399,6 +399,7 @@ function shortDate(s){var d=parseYmd(s);return d?d.toLocaleDateString(undefined,
 function timeRange(s){return s.start?(s.end?s.start+'–'+s.end:s.start):'Time to be set'}
 function uniq(arr){return arr.filter(function(v,i){return v&&arr.indexOf(v)===i})}
 function placeHtml(loc){var u=safeUrl(loc);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">Join online</a>':esc(loc)}
+function articleHtml(value){var u=safeUrl(value);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(value)+'</a>':'<i>'+esc(value)+'</i>'}
 function previewUrl(u){
   u=safeUrl(u);if(!u)return '';
   var m=/^https:\/\/drive\.google\.com\/file\/d\/([\w-]+)/.exec(u);
@@ -497,7 +498,7 @@ function renderHero(){
   if(n.presenter)meta+='<span>'+esc(n.presenter)+'</span>';
   if(n.location)meta+='<span>'+placeHtml(n.location)+'</span>';
   el.innerHTML='<div><div class="eyebrow">Next session'+(n.ex?' · example':'')+'</div><h2 class="next-title">'+esc(n.title)+'</h2><div class="next-meta">'+meta+'</div>'+
-    (n.article?'<div class="next-meta"><span>Article: <b>'+esc(n.article)+'</b></span></div>':'')+
+    (n.article?'<div class="next-meta"><span>Article: <b>'+articleHtml(n.article)+'</b></span></div>':'')+
     '<div class="hero-actions"><button class="btn" data-act="ics" data-id="'+esc(n.id)+'">Add to calendar</button></div></div>'+
     '<div class="hero-side"><span class="eyebrow">'+DOW[d.getDay()]+'</span><span class="hnum">'+d.getDate()+'</span><span class="hmon">'+MONTHS[d.getMonth()]+'</span><span class="pill">'+esc(pill)+'</span></div>'+stats;
 }
@@ -524,7 +525,7 @@ function sessionRow(s){
   if(s.type)tags+='<span class="chip">'+esc(s.type)+'</span>';
   if(s.ex)tags+='<span class="pill ex">Example</span>';
   var sub='';
-  if(s.article)sub+='<div class="sub"><b>Article:</b> <i>'+esc(s.article)+'</i></div>';
+  if(s.article)sub+='<div class="sub"><b>Article:</b> '+articleHtml(s.article)+'</div>';
   if(s.notes)sub+='<div class="sub">'+esc(s.notes)+'</div>';
   var cal=st==='past'?'':'<button class="linkbtn" data-act="ics" data-id="'+esc(s.id)+'">Add to calendar</button>';
   return '<div class="row '+st+'"><div class="dt"><span class="dow">'+DOW[d.getDay()]+'</span><span class="dnum">'+d.getDate()+'</span><span class="mon">'+MON[d.getMonth()]+'</span></div>'+
