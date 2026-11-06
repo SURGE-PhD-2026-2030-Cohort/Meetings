@@ -4,37 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <title>Surge PhD Cohort Meetings</title>
 <script>
 /* Apply a saved light/dark choice before the page paints, so it does not flash. */
 try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t)}catch(e){}
 </script>
 <style>
-/* Concept: an editorial research dashboard — warm ivory, near-black panels and restrained burnt-orange accents. */
+/* Concept: a restrained editorial research dashboard — soft grayscale, forest-green accents and warm brown details. */
 :root{
-  --sans:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --display:"DM Serif Display",Georgia,"Times New Roman",serif;
-  --bg:#F8F9D9; --surface:#FFFFEA; --surface-2:#EEF0D0; --fg:#171914; --muted:#686A58; --line:#DADDBB;
-  --accent:#C88948; --accent-text:#75471F; --accent-soft:#F4E3CA; --accent-ink:#17130D;
-  --gold:#C88948; --gold-text:#75471F; --gold-soft:#F4E3CA;
-  --hero-bg:#050707; --hero-fg:#F8F9DF; --hero-muted:#C6C7AE; --hero-gold:#D99A59; --hero-line:rgba(248,249,223,.2);
-  --good:#47764D; --good-soft:#E5EEDB;
-  --danger:#A34F3D; --danger-soft:#F7E5D8;
-  --shadow:0 1px 2px rgba(20,22,14,.07),0 10px 28px -14px rgba(20,22,14,.22);
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:Garamond,"Adobe Garamond Pro","Apple Garamond",Georgia,serif;
+  --bg:#E9E9E6; --surface:#F7F7F4; --surface-2:#DEDFDA; --fg:#252723; --muted:#70736C; --line:#D0D1CB;
+  --accent:#526B55; --accent-text:#405A44; --accent-soft:#E0E7DF; --accent-ink:#FFFFFF;
+  --gold:#987653; --gold-text:#73563A; --gold-soft:#EEE6DC;
+  --hero-bg:#303330; --hero-fg:#F4F3ED; --hero-muted:#C4C6BE; --hero-gold:#B9C7B5; --hero-line:rgba(255,255,255,.18);
+  --good:#496C50; --good-soft:#E1E9E0;
+  --danger:#985B50; --danger-soft:#F0E2DE;
+  --shadow:0 1px 2px rgba(35,38,34,.06),0 8px 24px -12px rgba(35,38,34,.18);
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#11120D; --surface:#1D1F17; --surface-2:#292B20; --fg:#F5F3DF; --muted:#B7B39A; --line:#3B3B2D;
-    --accent:#D99A59; --accent-text:#F0BD82; --accent-soft:#3C2D20; --accent-ink:#17130D;
-    --gold:#D99A59; --gold-text:#F0BD82; --gold-soft:#3C2D20;
-    --hero-bg:#050606; --hero-fg:#F8F7E8; --hero-muted:#C5C1A9; --hero-gold:#E0A66B; --hero-line:rgba(248,247,232,.18);
-    --good:#8FC49A; --good-soft:#26382A;
-    --danger:#E39B87; --danger-soft:#432B25;
-    --shadow:0 1px 2px rgba(0,0,0,.45),0 8px 24px -12px rgba(0,0,0,.65);
+    --bg:#20221F; --surface:#2A2D29; --surface-2:#353934; --fg:#F0F0E9; --muted:#B0B4AA; --line:#454A43;
+    --accent:#91A891; --accent-text:#B8CBB7; --accent-soft:#344238; --accent-ink:#20221F;
+    --gold:#B69A7A; --gold-text:#D0B99D; --gold-soft:#453A2F;
+    --hero-bg:#171A17; --hero-fg:#F2F1E9; --hero-muted:#B6B9AE; --hero-gold:#B9C7B5; --hero-line:rgba(255,255,255,.18);
+    --good:#8EBB92; --good-soft:#2C4030;
+    --danger:#D39A8D; --danger-soft:#49312D;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
     color-scheme:dark;
   }
 }
