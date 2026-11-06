@@ -6,44 +6,44 @@
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <title>Surge PhD Cohort Meetings</title>
 <script>
 /* Apply a saved light/dark choice before the page paints, so it does not flash. */
 try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t)}catch(e){}
 </script>
 <style>
-/* Concept: a clean cohort dashboard with a lavender, plum and soft-violet palette. */
+/* Concept: a scholarly almanac. Georgia throughout, navy ink on cool paper, gold only for "now" (next session, today). The next-session panel is the single bold block; everything else stays quiet. Library entries read like reference-list citations. */
 :root{
-  --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --bg:#F7F5FC; --surface:#FFFFFF; --surface-2:#EEEAF7; --fg:#29213A; --muted:#756B88; --line:#E1DAEE;
-  --accent:#8B70C7; --accent-text:#684DA5; --accent-soft:#EEE8FA; --accent-ink:#FFFFFF;
-  --gold:#A78AD8; --gold-text:#7356AA; --gold-soft:#F0EAFB;
-  --hero-bg:#392B55; --hero-fg:#FBF9FF; --hero-muted:#D2C8E3; --hero-gold:#D8C5F4; --hero-line:rgba(255,255,255,.2);
-  --good:#39785C; --good-soft:#E1F1E8;
-  --danger:#A34F68; --danger-soft:#F8E5EB;
-  --shadow:0 1px 2px rgba(57,43,85,.06),0 8px 24px -12px rgba(57,43,85,.2);
+  --sans:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --bg:#F4F5FA; --surface:#FFFFFF; --surface-2:#ECEEF6; --fg:#121733; --muted:#59607F; --line:#D9DCEA;
+  --accent:#1C4E9D; --accent-text:#173F80; --accent-soft:#E2EAF8; --accent-ink:#FFFFFF;
+  --gold:#B7791F; --gold-text:#7A4E08; --gold-soft:#FBEED0;
+  --hero-bg:#101C45; --hero-fg:#F3F5FC; --hero-muted:#B3BCDD; --hero-gold:#F0C25E; --hero-line:rgba(255,255,255,.18);
+  --good:#17653A; --good-soft:#DCF0E3;
+  --danger:#A8231C; --danger-soft:#FBE0DE;
+  --shadow:0 1px 2px rgba(16,28,69,.06),0 8px 24px -12px rgba(16,28,69,.18);
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#171322; --surface:#211B30; --surface-2:#2D2540; --fg:#F1ECF8; --muted:#B5A9C8; --line:#403650;
-    --accent:#B69AE8; --accent-text:#D0BDF5; --accent-soft:#382D4D; --accent-ink:#211B30;
-    --gold:#C8AFE9; --gold-text:#D8C5F4; --gold-soft:#3A2E4D;
-    --hero-bg:#302342; --hero-fg:#FBF9FF; --hero-muted:#C9BBD9; --hero-gold:#D8C5F4; --hero-line:rgba(255,255,255,.18);
-    --good:#83C6A2; --good-soft:#20392F;
-    --danger:#E59AAF; --danger-soft:#452B38;
+    --bg:#0A1022; --surface:#111A33; --surface-2:#1A2547; --fg:#E8EBF7; --muted:#9AA3C4; --line:#25315A;
+    --accent:#86B4F5; --accent-text:#A9CAFA; --accent-soft:#16264A; --accent-ink:#0A1022;
+    --gold:#EDC15E; --gold-text:#EDC15E; --gold-soft:#3A2D0E;
+    --hero-bg:#16255A; --hero-fg:#F1F4FD; --hero-muted:#AEB8DC; --hero-gold:#F0C25E; --hero-line:rgba(255,255,255,.18);
+    --good:#6FD08C; --good-soft:#143020;
+    --danger:#FF8F86; --danger-soft:#3D1C1A;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#171322; --surface:#211B30; --surface-2:#2D2540; --fg:#F1ECF8; --muted:#B5A9C8; --line:#403650;
-  --accent:#B69AE8; --accent-text:#D0BDF5; --accent-soft:#382D4D; --accent-ink:#211B30;
-  --gold:#C8AFE9; --gold-text:#D8C5F4; --gold-soft:#3A2E4D;
-  --hero-bg:#302342; --hero-fg:#FBF9FF; --hero-muted:#C9BBD9; --hero-gold:#D8C5F4; --hero-line:rgba(255,255,255,.18);
-  --good:#83C6A2; --good-soft:#20392F;
-  --danger:#E59AAF; --danger-soft:#452B38;
+  --bg:#0A1022; --surface:#111A33; --surface-2:#1A2547; --fg:#E8EBF7; --muted:#9AA3C4; --line:#25315A;
+  --accent:#86B4F5; --accent-text:#A9CAFA; --accent-soft:#16264A; --accent-ink:#0A1022;
+  --gold:#EDC15E; --gold-text:#EDC15E; --gold-soft:#3A2D0E;
+  --hero-bg:#16255A; --hero-fg:#F1F4FD; --hero-muted:#AEB8DC; --hero-gold:#F0C25E; --hero-line:rgba(255,255,255,.18);
+  --good:#6FD08C; --good-soft:#143020;
+  --danger:#FF8F86; --danger-soft:#3D1C1A;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
   color-scheme:dark;
 }
