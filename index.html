@@ -10,9 +10,9 @@
 try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t)}catch(e){}
 </script>
 <style>
-/* Concept: a restrained editorial research dashboard — soft grayscale, forest-green accents and warm brown details. */
+/* Concept: a restrained editorial research dashboard — Garamond throughout, soft grayscale and warm brown accents. */
 :root{
-  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --sans:Garamond,"Adobe Garamond Pro","Apple Garamond",Georgia,serif;
   --display:Garamond,"Adobe Garamond Pro","Apple Garamond",Georgia,serif;
   --bg:#E9E9E6; --surface:#F7F7F4; --surface-2:#DEDFDA; --fg:#252723; --muted:#70736C; --line:#D0D1CB;
   --accent:#526B55; --accent-text:#405A44; --accent-soft:#E0E7DF; --accent-ink:#FFFFFF;
@@ -25,11 +25,11 @@ try{var _t=localStorage.getItem('rh-theme');if(_t==='dark'||_t==='light')documen
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#20221F; --surface:#2A2D29; --surface-2:#353934; --fg:#F0F0E9; --muted:#B0B4AA; --line:#454A43;
-    --accent:#91A891; --accent-text:#B8CBB7; --accent-soft:#344238; --accent-ink:#20221F;
-    --gold:#B69A7A; --gold-text:#D0B99D; --gold-soft:#453A2F;
-    --hero-bg:#171A17; --hero-fg:#F2F1E9; --hero-muted:#B6B9AE; --hero-gold:#B9C7B5; --hero-line:rgba(255,255,255,.18);
-    --good:#8EBB92; --good-soft:#2C4030;
+    --bg:#202020; --surface:#292929; --surface-2:#353535; --fg:#F0EFEB; --muted:#B4B0A9; --line:#45433F;
+    --accent:#B79A7A; --accent-text:#D0B99D; --accent-soft:#40372F; --accent-ink:#211D18;
+    --gold:#B79A7A; --gold-text:#D0B99D; --gold-soft:#40372F;
+    --hero-bg:#111111; --hero-fg:#F3F1EA; --hero-muted:#BDB8AE; --hero-gold:#C7AD8D; --hero-line:rgba(255,255,255,.18);
+    --good:#A2B09C; --good-soft:#343A32;
     --danger:#D39A8D; --danger-soft:#49312D;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
     color-scheme:dark;
